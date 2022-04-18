@@ -42,7 +42,7 @@ jobs:
   release:
     name: Release APK
     needs: apk
-    if: needs.apk.result == success
+    if: needs.apk.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Download APK from build
