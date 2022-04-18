@@ -11,6 +11,7 @@ import com.dicoding.capstoneproject.core.data.wrapper.ResourceStatus
 import com.dicoding.capstoneproject.core.data.wrapper.ResourceWrapper
 import com.dicoding.capstoneproject.core.domain.model.MediaModel
 import com.dicoding.capstoneproject.core.domain.model.MediaType
+import com.dicoding.capstoneproject.core.utility.EspressoIdlingResource
 import com.example.capstoneproject.databinding.FragmentMediaBinding
 
 class MediaFragment(private val mediaType: MediaType) : Fragment() {
@@ -36,9 +37,9 @@ class MediaFragment(private val mediaType: MediaType) : Fragment() {
             binding.progressBarMediaList.tag = mediaType
             binding.rvMediaList.tag = mediaType
 
-            viewModel.mediaList.observe(viewLifecycleOwner, {
+            viewModel.mediaList().observe(viewLifecycleOwner) {
                 prepareMedia(it)
-            })
+            }
         }
     }
 
@@ -58,6 +59,13 @@ class MediaFragment(private val mediaType: MediaType) : Fragment() {
                     setHasFixedSize(true)
                     adapter = listAdapter
                     visibility = View.VISIBLE
+                }
+
+                if(!EspressoIdlingResource.idlingResource.isIdleNow && mediaType == MediaType.TV_SHOW){
+                    EspressoIdlingResource.decrement()
+                }
+                if(!EspressoIdlingResource.movieIdlingResource.isIdleNow && mediaType == MediaType.MOVIE){
+                    EspressoIdlingResource.decrementMovie()
                 }
             }
 

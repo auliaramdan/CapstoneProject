@@ -18,6 +18,9 @@ interface MediaDao {
     @Update
     fun update(media: MediaItem)
 
+    @Query("DELETE FROM mediaitem")
+    fun deleteAll()
+
     @Query("SELECT * FROM mediaitem")
     fun getAllMedia() : Flow<List<MediaItem>>
 

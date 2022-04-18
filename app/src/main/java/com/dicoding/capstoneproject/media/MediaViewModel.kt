@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.dicoding.capstoneproject.core.domain.usecase.IMediaUseCase
 
-class MediaViewModel (repository: IMediaUseCase): ViewModel() {
-    val mediaList = repository.getMediaList(false).asLiveData()
+class MediaViewModel (private val repository: IMediaUseCase): ViewModel() {
+    fun mediaList() = repository.getMediaList(false).asLiveData()
 
 }

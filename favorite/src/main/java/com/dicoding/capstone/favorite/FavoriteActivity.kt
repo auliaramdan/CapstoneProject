@@ -21,8 +21,8 @@ class FavoriteActivity : AppCompatActivity() {
         loadKoinModules(favoriteModule)
 
         val sectionsPagerAdapter = FavoriteSectionsPagerAdapter(supportFragmentManager)
-        binding.viewPager.adapter = sectionsPagerAdapter
-        binding.tabs.setupWithViewPager(binding.viewPager)
+        binding.viewPagerFavorite.adapter = sectionsPagerAdapter
+        binding.tabs.setupWithViewPager(binding.viewPagerFavorite)
 
         supportActionBar?.title = "Favorites"
         supportActionBar?.elevation = 0f
