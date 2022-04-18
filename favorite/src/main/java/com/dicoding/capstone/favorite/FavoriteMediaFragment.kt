@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import org.koin.android.viewmodel.ext.android.viewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.capstoneproject.core.data.wrapper.ResourceStatus
 import com.dicoding.capstoneproject.core.data.wrapper.ResourceWrapper
@@ -13,13 +12,14 @@ import com.dicoding.capstoneproject.core.domain.model.MediaModel
 import com.dicoding.capstoneproject.core.domain.model.MediaType
 import com.dicoding.capstoneproject.media.MediaListAdapter
 import com.example.capstoneproject.databinding.FragmentMediaBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FavoriteMediaFragment(private val mediaType: MediaType) : Fragment() {
 
     private var _binding : FragmentMediaBinding? = null
     private val binding get() = _binding!!
 
-    private  val viewModel : FavoriteViewModel by viewModel()
+    private  val favoriteViewModel : FavoriteViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +37,7 @@ class FavoriteMediaFragment(private val mediaType: MediaType) : Fragment() {
             binding.progressBarMediaList.tag = mediaType
             binding.rvMediaList.tag = mediaType
 
-            viewModel.favoriteMediaList.observe(viewLifecycleOwner, {
+            favoriteViewModel.favoriteMediaList.observe(viewLifecycleOwner, {
                 prepareMedia(it)
             })
         }

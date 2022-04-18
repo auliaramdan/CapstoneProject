@@ -50,10 +50,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    // Koin testing tools
-    //testImplementation "io.insert-koin:koin-test:$koin_version"
-    // Needed JUnit version
-    //testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
-
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$canary_version"
 }

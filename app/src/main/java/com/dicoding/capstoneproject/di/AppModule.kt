@@ -4,7 +4,7 @@ import com.dicoding.capstoneproject.core.domain.usecase.IMediaUseCase
 import com.dicoding.capstoneproject.core.domain.usecase.MediaInteractor
 import com.dicoding.capstoneproject.detail.DetailViewModel
 import com.dicoding.capstoneproject.media.MediaViewModel
-import org.koin.android.viewmodel.dsl.viewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {

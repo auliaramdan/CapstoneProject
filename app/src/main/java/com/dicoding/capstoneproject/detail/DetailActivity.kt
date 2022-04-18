@@ -15,7 +15,7 @@ import com.dicoding.capstoneproject.core.domain.model.MediaModel
 import com.dicoding.capstoneproject.core.utility.EspressoIdlingResource
 import com.example.capstoneproject.R
 import com.example.capstoneproject.databinding.ActivityDetailBinding
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
 
@@ -39,7 +39,7 @@ class DetailActivity : AppCompatActivity() {
 
         if (extraMedia != null) {
 
-            viewModel.mediaDetail(extraMedia.mediaType!!, extraMedia.id.toString()).observe(this, { media ->
+            viewModel.mediaDetail(extraMedia.mediaType!!, extraMedia.id.toString()).observe(this) { media ->
                 if (media == null)
                     return@observe
 
@@ -81,7 +81,7 @@ class DetailActivity : AppCompatActivity() {
                         binding.tvErrorDetail.text = media.message
                     }
                 }
-            })
+            }
         }
     }
 
