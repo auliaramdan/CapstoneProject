@@ -18,7 +18,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TestRule
 import org.junit.runner.RunWith
-import org.koin.test.KoinTest
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.junit.MockitoJUnitRunner
@@ -30,7 +29,7 @@ import org.mockito.junit.MockitoJUnitRunner
  */
 @ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)
-class DetailViewModelTest : KoinTest {
+class DetailViewModelTest {
 
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
