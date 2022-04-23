@@ -1,10 +1,8 @@
 package com.dicoding.capstone.favorite
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.capstone.favorite.databinding.ActivityFavoriteBinding
-import com.dicoding.capstoneproject.common.SectionsPagerAdapter
-import com.example.capstoneproject.databinding.ActivityMainBinding
 import org.koin.core.context.loadKoinModules
 
 class FavoriteActivity : AppCompatActivity() {

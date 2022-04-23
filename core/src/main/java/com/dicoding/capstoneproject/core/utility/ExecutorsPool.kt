@@ -17,9 +17,7 @@ class ExecutorsPool @VisibleForTesting constructor(
     )
 
     fun diskIO(): Executor = diskIO
-
-    fun mainThread(): Executor = mainThread
-
+    
     private class MainThreadExecutor : Executor {
         private val mainThreadHandler = Handler(Looper.getMainLooper())
 

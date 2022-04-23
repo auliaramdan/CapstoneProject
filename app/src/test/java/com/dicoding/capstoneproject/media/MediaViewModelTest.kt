@@ -38,6 +38,8 @@ class MediaViewModelTest : KoinTest {
     @Mock
     private lateinit var useCase: MediaInteractor
 
+    private val dummyMediaList = listOf(MediaModel(id = 0, name = "Test movie", mediaType = MediaType.MOVIE), MediaModel(id = 1, name = "Test show", mediaType = MediaType.TV_SHOW))
+
     @Before
     fun before() {
         Dispatchers.setMain(mainThreadSurrogate)
@@ -54,9 +56,7 @@ class MediaViewModelTest : KoinTest {
     fun `test get list`() = runBlocking {
 
         Mockito.`when`(useCase.getMediaList(false)).thenReturn(flow {
-            emit(ResourceWrapper.success(listOf(
-                MediaModel(0, "Test movie", "", "", "", false, MediaType.MOVIE),
-                MediaModel(1, "Test show", "", "", "", false, MediaType.TV_SHOW))))
+            emit(ResourceWrapper.success(dummyMediaList))
         })
 
         assertNotNull(viewModel.mediaList().getLiveDataValue())

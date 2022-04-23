@@ -2,7 +2,6 @@ package com.dicoding.capstoneproject.core.data.remote
 
 import com.dicoding.capstoneproject.core.data.local.entity.MediaItem
 import com.dicoding.capstoneproject.core.data.local.entity.MediaListResponse
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 

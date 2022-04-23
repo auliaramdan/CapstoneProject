@@ -1,8 +1,5 @@
 package com.dicoding.capstoneproject.core.utility
 
-import android.util.Log
-import androidx.paging.DataSource
-import com.dicoding.capstoneproject.core.R
 import com.dicoding.capstoneproject.core.data.local.entity.MediaItem
 import com.dicoding.capstoneproject.core.domain.model.MediaModel
 import com.dicoding.capstoneproject.core.domain.model.MediaType

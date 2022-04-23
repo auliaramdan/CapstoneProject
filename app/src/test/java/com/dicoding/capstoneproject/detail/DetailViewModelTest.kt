@@ -1,32 +1,26 @@
 package com.dicoding.capstoneproject.detail
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.lifecycle.asLiveData
 import com.dicoding.capstoneproject.core.data.wrapper.ResourceWrapper
 import com.dicoding.capstoneproject.core.domain.model.MediaModel
 import com.dicoding.capstoneproject.core.domain.model.MediaType
 import com.dicoding.capstoneproject.core.domain.usecase.MediaInteractor
 import com.dicoding.capstoneproject.utils.getLiveDataValue
-import com.dicoding.capstoneproject.detail.DetailViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
 import org.junit.After
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Rule
+import org.junit.Test
 import org.junit.rules.TestRule
 import org.junit.runner.RunWith
 import org.koin.test.KoinTest
-import org.koin.test.KoinTestRule
-import org.koin.test.get
-import org.koin.test.inject
 import org.mockito.Mock
 import org.mockito.Mockito
-import org.mockito.MockitoAnnotations
 import org.mockito.junit.MockitoJUnitRunner
 
 /**

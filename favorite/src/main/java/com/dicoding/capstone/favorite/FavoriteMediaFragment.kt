@@ -1,6 +1,7 @@
 package com.dicoding.capstone.favorite
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -37,9 +38,9 @@ class FavoriteMediaFragment(private val mediaType: MediaType) : Fragment() {
             binding.progressBarMediaList.tag = mediaType
             binding.rvMediaList.tag = mediaType
 
-            favoriteViewModel.favoriteMediaList.observe(viewLifecycleOwner, {
+            favoriteViewModel.favoriteMediaList.observe(viewLifecycleOwner) {
                 prepareMedia(it)
-            })
+            }
         }
     }
 
@@ -47,10 +48,18 @@ class FavoriteMediaFragment(private val mediaType: MediaType) : Fragment() {
 
         when(media.status) {
             ResourceStatus.SUCCESS -> {
+
                 binding.progressBarMediaList.visibility = View.GONE
 
                 val listAdapter = MediaListAdapter()
                 media.data?.let { list ->
+                    if(list.none { it.mediaType == mediaType }) {
+                        binding.progressBarMediaList.visibility = View.GONE
+                        binding.tvErrorMediaList.visibility = View.VISIBLE
+                        binding.tvErrorMediaList.text = getString(R.string.no_favorite)
+                        return
+                    }
+
                     listAdapter.submitList(list.filter { it.mediaType == mediaType })
                 }
 

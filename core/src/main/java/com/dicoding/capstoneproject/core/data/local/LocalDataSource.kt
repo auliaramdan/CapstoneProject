@@ -1,12 +1,7 @@
 package com.dicoding.capstoneproject.core.data.local
 
-import androidx.lifecycle.LiveData
-import androidx.paging.DataSource
 import com.dicoding.capstoneproject.core.data.local.entity.MediaItem
 import com.dicoding.capstoneproject.core.data.local.room.MediaDao
-import com.dicoding.capstoneproject.core.domain.model.MediaModel
-import com.dicoding.capstoneproject.core.domain.model.MediaType
-import com.dicoding.capstoneproject.core.utility.DataMapper
 import kotlinx.coroutines.flow.Flow
 
 class LocalDataSource(private val mediaDao: MediaDao){

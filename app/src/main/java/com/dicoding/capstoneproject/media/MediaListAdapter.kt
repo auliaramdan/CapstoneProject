@@ -22,7 +22,7 @@ class MediaListAdapter: RecyclerView.Adapter<MediaListAdapter.MediaViewHolder>()
 
         mediaList.clear()
         mediaList.addAll(newList)
-        notifyDataSetChanged()
+        notifyItemInserted(0)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaViewHolder =

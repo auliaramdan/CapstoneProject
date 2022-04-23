@@ -1,15 +1,10 @@
 package com.dicoding.capstoneproject.core.data
 
-import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
 import com.dicoding.capstoneproject.core.data.remote.ApiResponse
-import com.dicoding.capstoneproject.core.data.wrapper.ResourceStatus
 import com.dicoding.capstoneproject.core.data.wrapper.ResourceWrapper
-import com.dicoding.capstoneproject.core.utility.ExecutorsPool
 import kotlinx.coroutines.flow.*
 
-abstract class NetworkResourceHandler<ResultType, ResponseType>() {
+abstract class NetworkResourceHandler<ResultType, ResponseType> {
 
     private var result: Flow<ResourceWrapper<ResultType>> = flow {
         emit(ResourceWrapper.loading())

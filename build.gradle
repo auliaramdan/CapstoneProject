@@ -12,6 +12,8 @@ buildscript {
     ext.logging_interceptor_version = "4.9.0"
     ext.koin_version = "3.1.6"
     ext.kotlin_coroutines_version = "1.5.0"
+    ext.sqlcipher_version = "4.4.0"
+    ext.sqlite_verision = "2.1.0"
 
     ext.material_version = "1.5.0"
     ext.glide_version = "4.12.0"
@@ -24,6 +26,7 @@ buildscript {
     ext.mockito_kotlin_version = "2.2.0"
     ext.android_test_version = "2.1.0"
     ext.kotlin_coroutines_version = "1.6.1"
+
 
     repositories {
         google()

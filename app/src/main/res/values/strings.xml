@@ -2,15 +2,11 @@
     <string name="app_name">Capstone Project 1</string>
     <string name="poster">poster</string>
 
-    <string name="movie">Movie</string>
-    <string name="tv_show">TV Show</string>
     <string name="title">Title</string>
     <string name="type_movie">movie</string>
-    <string name="type_tv_show">tv</string>
     <string name="dateline">Dateline</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="lorem_ipsum">LOREM IPSUM</string>
     <string name="menu_favorites">Favorites</string>
-    <string name="title_activity_favorite">Favorite</string>
     <string name="title_favorite">Favorite</string>
 </resources>

@@ -1,10 +1,7 @@
 package com.dicoding.capstoneproject.common
 
-import android.content.Context
 import android.os.SystemClock
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.action.ViewActions
@@ -14,24 +11,15 @@ import androidx.test.espresso.contrib.ViewPagerActions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.ActivityScenarioRule
-import com.dicoding.capstoneproject.core.data.local.room.MediaDao
-import com.dicoding.capstoneproject.core.data.local.room.MediaDao_Impl
-import com.dicoding.capstoneproject.core.data.local.room.MediaDatabase
-import com.dicoding.capstoneproject.core.di.databaseModule
 import com.dicoding.capstoneproject.core.domain.model.MediaType
 import com.dicoding.capstoneproject.core.utility.EspressoIdlingResource
 import com.example.capstoneproject.R
-import kotlinx.coroutines.flow.first
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.Matchers
 import org.junit.After
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.koin.core.context.startKoin
-import org.koin.dsl.module
-import org.koin.java.KoinJavaComponent.get
 
 class MainActivityTest {
 

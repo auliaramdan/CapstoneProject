@@ -1,11 +1,9 @@
 package com.dicoding.capstone.favorite
 
-import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.dicoding.capstoneproject.core.domain.model.MediaType
-import com.dicoding.capstoneproject.media.MediaFragment
 
 class FavoriteSectionsPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     override fun getCount(): Int = TAB_TITLES.size

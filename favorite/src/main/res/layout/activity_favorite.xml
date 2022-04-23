@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FavoriteActivity">
+    tools:context=".FavoriteActivity"
+    tools:keep="@layout/activity_favorite">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"

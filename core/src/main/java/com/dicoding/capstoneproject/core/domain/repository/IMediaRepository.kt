@@ -1,9 +1,5 @@
 package com.dicoding.capstoneproject.core.domain.repository
 
-import androidx.lifecycle.LiveData
-import androidx.paging.DataSource
-import androidx.paging.PagedList
-import com.dicoding.capstoneproject.core.data.local.entity.MediaItem
 import com.dicoding.capstoneproject.core.data.wrapper.ResourceWrapper
 import com.dicoding.capstoneproject.core.domain.model.MediaModel
 import com.dicoding.capstoneproject.core.domain.model.MediaType
